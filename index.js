@@ -34,7 +34,7 @@ const pessoas = require('./routes/pessoas')
 
 app.use(bodyParser.urlencoded({ extended: false }))
     //public pasta de assets
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 //rota para o home
 app.get('/', (req, res) => {
